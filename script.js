@@ -225,6 +225,10 @@ flipCard.addEventListener("click", () => {
   flashcard.classList.toggle("is-flipped");
 });
 
+flashcard.addEventListener("click", () => {
+  flashcard.classList.toggle("is-flipped");
+});
+
 prevCard.addEventListener("click", () => {
   currentCard = (currentCard - 1 + flashcards.length) % flashcards.length;
   renderFlashcard();
