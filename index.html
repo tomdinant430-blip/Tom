@@ -162,14 +162,20 @@
         <p>Clique sur une carte pour révéler la réponse, puis passe à la suivante.</p>
       </div>
       <div class="flashcard-panel">
-        <div class="flashcard" id="flashcard">
-          <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
-          <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+        <div class="flashcard-nav">
+          <button class="button ghost flashcard-side" id="prev-card" type="button" aria-label="Carte précédente">
+            ◀
+          </button>
+          <div class="flashcard" id="flashcard">
+            <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+            <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+          </div>
+          <button class="button ghost flashcard-side" id="next-card" type="button" aria-label="Carte suivante">
+            ▶
+          </button>
         </div>
         <div class="flashcard-controls">
-          <button class="button ghost" id="prev-card" type="button">Précédente</button>
           <button class="button primary" id="flip-card" type="button">Retourner</button>
-          <button class="button ghost" id="next-card" type="button">Suivante</button>
         </div>
         <p class="flashcard-progress">Carte <span id="flashcard-index">1</span>/<span id="flashcard-total">1</span></p>
       </div>

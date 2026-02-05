@@ -322,11 +322,28 @@ main {
   justify-items: center;
 }
 
+.flashcard-nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
 .flashcard {
   width: min(520px, 90vw);
   height: 260px;
   perspective: 1200px;
   position: relative;
+}
+
+.flashcard-side {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
 }
 
 .flashcard-face {
@@ -404,5 +421,15 @@ main {
 
   .section.alt {
     padding: 2.5rem 6vw;
+  }
+
+  .flashcard-nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .flashcard-side {
+    width: 44px;
+    height: 44px;
   }
 }
