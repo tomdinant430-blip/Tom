@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SVT — Quiz & Flashcards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">SVT • Thermorégulation</p>
+      <h1>Transforme ton cours en quiz et flashcards</h1>
+      <p class="lead">
+        Colle ton cours ci-dessous pour générer automatiquement des quiz et des flashcards.
+        Un jeu de données est déjà chargé à partir du cours sur les échanges thermiques du corps.
+      </p>
+    </div>
+    <div class="hero-card">
+      <h2>Conseil</h2>
+      <p>Utilise des lignes avec <strong>Terme : Définition</strong> pour des flashcards précises.</p>
+      <p>Exemple : <em>Conduction : chaleur transmise de proche en proche...</em></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>1. Ton cours</h2>
+      <textarea id="courseInput" rows="10"></textarea>
+      <div class="actions">
+        <button id="generateAll">Générer quiz & flashcards</button>
+        <button class="ghost" id="resetContent">Réinitialiser le cours</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>2. Quiz</h2>
+        <button id="newQuiz" class="ghost">Nouveau quiz</button>
+      </div>
+      <div id="quizContainer" class="quiz"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>3. Flashcards</h2>
+        <p class="muted">Clique sur chaque carte pour la retourner.</p>
+      </div>
+      <div id="flashcardContainer" class="flashcards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Créé pour réviser rapidement avec un cours de SVT.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
