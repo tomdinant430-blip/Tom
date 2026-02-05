@@ -7,6 +7,11 @@ const demoButton = document.getElementById("demo-button");
 
 const demoText = `La photosynthèse est le processus par lequel les plantes convertissent l'énergie solaire en énergie chimique.\n\nElle se déroule principalement dans les chloroplastes, où la chlorophylle capture la lumière.\n\nL'équation simplifiée est : 6 CO2 + 6 H2O + lumière → C6H12O6 + 6 O2.\n\nLes facteurs influençant la photosynthèse incluent l'intensité lumineuse, la concentration en CO2 et la température.`;
 
+if (window.pdfjsLib?.GlobalWorkerOptions) {
+  window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.worker.min.js";
+}
+
 const keywords = ["est", "sont", "définit", "définir", "processus", "facteur", "inclut", "incluent", "se déroule", "principalement"]; 
 
 const createFlashcards = (sentences) => {
