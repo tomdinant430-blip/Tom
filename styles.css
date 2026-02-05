@@ -1,0 +1,268 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f5ff;
+  --card: #ffffff;
+  --ink: #1f1f2e;
+  --muted: #5f5b7a;
+  --accent: #6c5ce7;
+  --accent-soft: rgba(108, 92, 231, 0.12);
+  --border: #e4e0f5;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem clamp(1.5rem, 4vw, 5rem);
+  gap: 2rem;
+}
+
+.hero__content {
+  max-width: 560px;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.hero__subtitle {
+  color: var(--muted);
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  background: var(--card);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(39, 21, 120, 0.1);
+}
+
+.hero__stats span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero__stats p {
+  color: var(--muted);
+}
+
+main {
+  padding: 0 clamp(1.5rem, 4vw, 5rem) 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.panel {
+  background: var(--card);
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(60, 48, 120, 0.12);
+  border: 1px solid var(--border);
+}
+
+.panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel__header h2 {
+  font-size: 1.6rem;
+}
+
+.panel__header p {
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.panel__actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(108, 92, 231, 0.3);
+}
+
+.button--ghost {
+  background: var(--accent-soft);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.course-grid,
+.quiz-grid,
+.flashcard-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.course-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.quiz-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.flashcard-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.course-card,
+.quiz-card,
+.flashcard {
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-card h3 {
+  font-size: 1.1rem;
+}
+
+.course-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.quiz-card h3 {
+  font-size: 1.1rem;
+}
+
+.quiz-card .quiz-answer {
+  background: var(--accent-soft);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  color: var(--accent);
+  font-weight: 600;
+  display: none;
+}
+
+.quiz-card.revealed .quiz-answer {
+  display: block;
+}
+
+.quiz-card button {
+  align-self: flex-start;
+}
+
+.flashcard {
+  position: relative;
+  min-height: 170px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flashcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(52, 38, 120, 0.15);
+}
+
+.flashcard__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.flashcard__face {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.flashcard__back {
+  display: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.flashcard.is-flipped {
+  background: var(--accent);
+  color: #fff;
+}
+
+.flashcard.is-flipped .flashcard__back {
+  display: block;
+  color: #fff;
+}
+
+.flashcard.is-flipped .flashcard__front {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 1rem 3rem;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 1.5rem;
+  }
+
+  .panel__actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

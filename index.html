@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Générateur de quiz & flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Cours d'anglais - Wish & Would rather</p>
+        <h1>Révisions interactives : quiz & flashcards</h1>
+        <p class="hero__subtitle">
+          Transforme automatiquement ton cours en exercices : révise les structures, vérifie ta compréhension et
+          enchaîne les cartes.
+        </p>
+      </div>
+      <div class="hero__stats">
+        <div>
+          <span id="flashcard-count">0</span>
+          <p>flashcards</p>
+        </div>
+        <div>
+          <span id="quiz-count">0</span>
+          <p>questions</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="course-section">
+        <div class="panel__header">
+          <h2>Ton cours</h2>
+          <p>Base de connaissances utilisée pour générer les quiz et les flashcards.</p>
+        </div>
+        <div class="course-grid" id="course-grid"></div>
+      </section>
+
+      <section class="panel" id="quiz-section">
+        <div class="panel__header">
+          <div>
+            <h2>Quiz générés</h2>
+            <p>Choisis un quiz et vérifie tes réponses.</p>
+          </div>
+          <div class="panel__actions">
+            <button class="button" id="shuffle-quiz">Nouveau quiz</button>
+            <button class="button button--ghost" id="reveal-all">Tout révéler</button>
+          </div>
+        </div>
+        <div class="quiz-grid" id="quiz-grid"></div>
+      </section>
+
+      <section class="panel" id="flashcards-section">
+        <div class="panel__header">
+          <div>
+            <h2>Flashcards</h2>
+            <p>Chaque carte peut être retournée indépendamment. Clique pour révéler la réponse.</p>
+          </div>
+          <div class="panel__actions">
+            <button class="button" id="reset-flashcards">Tout replier</button>
+          </div>
+        </div>
+        <div class="flashcard-grid" id="flashcard-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Préparé avec ton cours pour des révisions rapides.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
