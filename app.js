@@ -114,8 +114,18 @@ const processText = (text) => {
 };
 
 const readPdf = async (file) => {
+  if (!window.pdfjsLib) {
+    throw new Error("pdfjsLib indisponible");
+  }
   const arrayBuffer = await file.arrayBuffer();
-  const pdf = await window.pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+  const loadDocument = (options) => window.pdfjsLib.getDocument(options).promise;
+  let pdf;
+  try {
+    pdf = await loadDocument({ data: arrayBuffer });
+  } catch (error) {
+    console.warn("Chargement PDF en worker échoué, tentative sans worker.", error);
+    pdf = await loadDocument({ data: arrayBuffer, disableWorker: true });
+  }
   const pages = Array.from({ length: pdf.numPages }, (_, index) => index + 1);
   const pageTexts = [];
 
