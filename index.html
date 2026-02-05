@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capteurs SI — Cours, Quiz & Flashcards</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">SI • Capteurs</div>
+      <div class="nav-links">
+        <a href="#cours">Cours</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#flashcards">Flashcards</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <div>
+        <p class="badge">Session 2025-2026 · 1GSI</p>
+        <h1>Modéliser la fonction <span>Acquérir</span> : les capteurs</h1>
+        <p class="subtitle">
+          Révise ton cours avec des synthèses claires, puis entraîne-toi avec un quiz interactif
+          et des flashcards pour mémoriser définitions, formules et exemples.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#quiz">Commencer le quiz</a>
+          <a class="button ghost" href="#flashcards">Réviser avec des flashcards</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Objectifs d'apprentissage</h3>
+        <ul>
+          <li>Comprendre la chaîne d'information et la fonction d'acquisition.</li>
+          <li>Différencier capteurs TOR, analogiques et numériques.</li>
+          <li>Maîtriser les notions d'étendue, sensibilité, précision, fidélité.</li>
+          <li>Lire une fonction de transfert et interpréter les erreurs de mesure.</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="cours" class="section">
+      <div class="section-title">
+        <h2>Le cours en résumé</h2>
+        <p>Des fiches courtes pour retrouver l'essentiel rapidement.</p>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <h3>Chaîne d'information</h3>
+          <p>
+            La chaîne d'information d'un système pluri‑technologique reçoit des consignes de l'utilisateur
+            et des mesures de grandeurs physiques. La fonction <strong>Acquérir</strong> transforme ces grandeurs
+            en signaux exploitables pour la fonction <strong>Traiter</strong>.
+          </p>
+          <div class="tag-list">
+            <span>Acquérir</span>
+            <span>Traiter</span>
+            <span>Communiquer</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Capteurs : définition</h3>
+          <p>
+            Un capteur prélève une information issue d'une grandeur physique (température, pression,
+            vitesse...). Il fournit une grandeur de sortie, souvent électrique, utilisable pour mesurer ou
+            commander un système.
+          </p>
+          <div class="tag-list">
+            <span>Grandeur physique</span>
+            <span>Signal de sortie</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Caractéristiques d'un capteur</h3>
+          <ul>
+            <li><strong>Étendue de mesure</strong> : valeurs extrêmes mesurables.</li>
+            <li><strong>Résolution</strong> : plus petite variation détectable.</li>
+            <li><strong>Sensibilité</strong> : variation de la sortie / variation de l'entrée.</li>
+            <li><strong>Précision</strong> : proximité entre mesure et valeur vraie.</li>
+            <li><strong>Rapidité</strong> : temps de réaction.</li>
+            <li><strong>Linéarité</strong> : proportionnalité de la sortie à l'entrée.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Erreurs de mesure</h3>
+          <p>
+            La qualité d'un capteur se juge avec la <strong>justesse</strong> (écart à la valeur vraie),
+            la <strong>fidélité</strong> (répétabilité) et la <strong>précision</strong> (combinaison justesse + fidélité).
+          </p>
+          <div class="highlight">
+            <p><strong>Erreur relative</strong> : ε<sub>r</sub> = ε / X (souvent en %).</p>
+            <p><strong>Erreur absolue</strong> : ε = x − X.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="grid three">
+        <article class="card">
+          <h3>Capteurs TOR</h3>
+          <p>
+            Les capteurs <strong>Tout Ou Rien</strong> délivrent un signal binaire (0 ou 1).
+            Ils utilisent souvent un seuil haut et un seuil bas pour éviter l'instabilité (hystérésis).
+          </p>
+          <ul>
+            <li>Interrupteur de position</li>
+            <li>Détecteur inductif</li>
+            <li>Détecteur photoélectrique</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Capteurs analogiques</h3>
+          <p>
+            Les capteurs proportionnels analogiques produisent un signal continu (0‑10 V, -10/+10 V, 0‑20 mA,
+            4‑20 mA). La sortie est proportionnelle à la grandeur mesurée.
+          </p>
+          <ul>
+            <li>Jauge de contrainte</li>
+            <li>Capteur de température</li>
+            <li>Accéléromètre capacitif</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Capteurs numériques</h3>
+          <p>
+            Les capteurs numériques délivrent un code (binaire, Gray...). Exemple : codeur absolu ou
+            incrémental pour la position angulaire.
+          </p>
+          <ul>
+            <li>Sortie série ou parallèle</li>
+            <li>Code binaire naturel / Gray</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="quiz" class="section alt">
+      <div class="section-title">
+        <h2>Quiz interactif</h2>
+        <p>Réponds aux questions, puis vérifie tes réponses et ton score.</p>
+      </div>
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <p><strong>Progression :</strong> <span id="quiz-progress">0</span>/<span id="quiz-total">0</span></p>
+          <p class="score">Score : <span id="quiz-score">0</span> pts</p>
+        </div>
+        <div id="quiz-list" class="quiz-list"></div>
+        <div class="quiz-actions">
+          <button class="button primary" id="check-answers">Vérifier mes réponses</button>
+          <button class="button ghost" id="reset-quiz">Réinitialiser</button>
+        </div>
+        <p class="quiz-feedback" id="quiz-feedback"></p>
+      </div>
+    </section>
+
+    <section id="flashcards" class="section">
+      <div class="section-title">
+        <h2>Flashcards</h2>
+        <p>Clique sur une carte pour révéler la réponse, puis passe à la suivante.</p>
+      </div>
+      <div class="flashcard-panel">
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard-face flashcard-front" id="flashcard-front"></div>
+          <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+        </div>
+        <div class="flashcard-controls">
+          <button class="button ghost" id="prev-card">Précédente</button>
+          <button class="button primary" id="flip-card">Retourner</button>
+          <button class="button ghost" id="next-card">Suivante</button>
+        </div>
+        <p class="flashcard-progress">Carte <span id="flashcard-index">1</span>/<span id="flashcard-total">1</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <h3>Besoin de plus d'entraînement ?</h3>
+      <p>Ajoute tes propres questions dans le fichier <code>script.js</code> pour personnaliser le quiz.</p>
+    </div>
+    <p class="muted">© 2025 — Site de révision Capteurs SI.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
