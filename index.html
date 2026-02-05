@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StudySpark - PDF vers Quiz & Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.2.67/pdf.min.js" integrity="sha512-AGQJGyNV32k7/hprxij5pKSbOoI4FAeR0PjIS1lCjYtWnmnhXFO4sPVJm3YwOJc7rK3QlZkqZ3coF2E61E4mWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">StudySpark</p>
+        <h1>Transforme ton cours PDF en quiz & flashcards</h1>
+        <p class="subtitle">
+          Charge un PDF, extrais le contenu, puis génère des questions et des cartes mémoire pour réviser plus vite.
+        </p>
+        <div class="hero-actions">
+          <label class="button primary" for="pdf-input">Charger un PDF</label>
+          <button class="button ghost" id="demo-button">Utiliser une démo</button>
+          <input id="pdf-input" type="file" accept="application/pdf" hidden />
+        </div>
+        <div class="status" id="status">Aucun PDF chargé pour le moment.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="card-preview">
+          <span class="badge">Flashcard</span>
+          <h3>Quel est le concept clé ?</h3>
+          <p>Réponse guidée à partir du PDF.</p>
+        </div>
+        <div class="card-preview quiz">
+          <span class="badge">Quiz</span>
+          <h3>Quelle définition correspond à...?</h3>
+          <div class="choices">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Extraction du contenu</h2>
+          <p>Le texte du PDF sert de base à la création des quiz et flashcards.</p>
+        </div>
+        <div class="panel-body">
+          <div class="output" id="extracted-text">Charge un PDF pour voir le texte ici.</div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Quiz généré</h2>
+            <p>Questions à choix multiples créées automatiquement.</p>
+          </div>
+          <div class="panel-body" id="quiz-container">
+            <div class="placeholder">Charge un PDF pour générer des quiz.</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Flashcards</h2>
+            <p>Cartes mémoire pour réviser les points clés.</p>
+          </div>
+          <div class="panel-body" id="flashcard-container">
+            <div class="placeholder">Charge un PDF pour générer des flashcards.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Astuce : des cours bien structurés donnent de meilleurs quiz.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
