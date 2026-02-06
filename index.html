@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coach de révisions</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Cours → Quiz & Flashcards</p>
+        <h1>Transforme ton cours en quiz et flashcards</h1>
+        <p class="subtitle">
+          Colle ton cours, clique sur un bouton, et révise avec des cartes et des questions
+          interactives.
+        </p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card input-panel">
+        <div class="panel-header">
+          <h2>Ton cours</h2>
+          <div class="panel-actions">
+            <button class="secondary" id="reset-course">Réinitialiser l'exemple</button>
+            <button class="secondary" id="clear-course">Effacer</button>
+          </div>
+        </div>
+        <textarea id="course-input" rows="16"></textarea>
+        <div class="cta-row">
+          <button id="generate-flashcards">Générer des flashcards</button>
+          <button id="generate-quiz" class="secondary">Générer un quiz</button>
+        </div>
+        <p class="helper">
+          Astuce : garde des phrases courtes ou des puces pour obtenir des cartes plus claires.
+        </p>
+      </section>
+
+      <section class="card output-panel">
+        <div class="panel-header">
+          <h2>Flashcards</h2>
+          <div class="panel-actions">
+            <button class="secondary" id="prev-card">Précédente</button>
+            <button class="secondary" id="next-card">Suivante</button>
+          </div>
+        </div>
+        <div class="flashcard" id="flashcard">
+          <div class="flashcard-face" id="flashcard-front"></div>
+          <div class="flashcard-face flashcard-back" id="flashcard-back"></div>
+        </div>
+        <div class="flashcard-footer">
+          <p id="flashcard-counter"></p>
+          <button class="secondary" id="flip-card">Retourner la carte</button>
+        </div>
+      </section>
+
+      <section class="card output-panel quiz-panel">
+        <div class="panel-header">
+          <h2>Quiz</h2>
+          <button class="secondary" id="reset-quiz">Réinitialiser</button>
+        </div>
+        <ol id="quiz-list" class="quiz-list"></ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Généré à partir de ton cours. Ajuste le texte pour affiner les questions et les cartes.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
